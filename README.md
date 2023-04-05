@@ -12,6 +12,8 @@
 
 **¥¥** : delete all bookmarks
 
+**URL_of_image** : delete the image
+
 # python-module used in the scripts
 datetime
 
