@@ -1,0 +1,75 @@
+
+::selection {
+	background-color:pink;
+}
+
+body {
+	background-color:lightblue;
+	margin:20px;
+}
+
+
+h2 {
+	background-color:blue;
+	color:white;
+	border:solid white 1px;
+	width:135px;
+	height:20px;
+	padding:5px;
+	padding-bottom:20px;
+	margin:5px;
+}
+
+.link {
+	background-color:;
+	height:30px;
+	margin:5px;
+}
+
+
+.form {
+	background-color:;
+	height:30px;
+	margin:5px;
+}
+
+textarea {
+	background-color:white;
+	color:black;
+	font-size:14px;
+	height:170px;
+	width:600px;
+	margin:0px;
+}
+
+
+.search {
+	background-color:;
+	height:30px;
+	margin:5px;
+}
+
+.file {
+	background-color:;
+	height:30px;
+	margin:5px;
+}
+
+hr {
+	border:solid 1.5px blue;
+}
+
+a {
+	background-color:pink;
+	padding:2px;
+}
+
+img {
+	border:solid blue 2.5px;
+}
+
+iframe {
+	border:none;
+}
+
+
