@@ -1,8 +1,8 @@
 
 # useful commands for search window
-all : show all articles
+*all* : show all articles
 
-img : show articles with image
+**img** : show articles with image
 
 rm + "article number" : delete the article
 
