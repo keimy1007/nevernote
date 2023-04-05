@@ -1,3 +1,5 @@
+# how to use
+
 
 # useful commands for search window
 **all** : show all articles
