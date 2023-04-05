@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>検索</title>
+    <title>Search</title>
     <link href="stylesheet.css" rel="stylesheet" type="text/css"></link>
     <script src="script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -12,22 +12,22 @@
 <form action="http://localhost:5000/cgi-bin/main.py" method="post" name="Form">
     
     <div class="file">
-        ノート：
-        <input type="radio" name="file" value="text/medical.txt" checked="checked">医学
-        <input type="radio" name="file" value="text/english.txt">英語
-        <input type="radio" name="file" value="text/python.txt">python
+        notes：
+        <input type="radio" name="file" value="text/note1.txt" checked="checked">note1
+        <input type="radio" name="file" value="text/note2.txt">note2
+        <input type="radio" name="file" value="text/note3.txt">note3
     </div>
-        コマンド：　all, img, rm, ¥, 消したい画像URL
+        commands：　all, img, rm, ¥, ¥¥, URL_of_image
     
     <div class="search">
-        検索：<input type="text" name="search" size=30 value="">
+        search：<input type="text" name="search" size=30 value="">
         <input type="radio" name="mode" value="and" checked="checked">and
         <input type="radio" name="mode" value="or">or
         <input type="checkbox" name="img" value=1>img
         <input type="checkbox" name="reverse" value=1>reverse
         <input type="checkbox" name="shuffle" value=1>shuffle
-        <input type="submit" value="実行" onclick="document.Form.target='frame';" >
-        <input type="button" value="リセット" onclick="document.getElementsByName('search')[0].value='';">
+        <input type="submit" value="exec" onclick="document.Form.target='frame';" >
+        <input type="button" value="reset" onclick="document.getElementsByName('search')[0].value='';">
     </div>
 
 </form>
