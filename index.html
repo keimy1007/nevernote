@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Medipedia</title>
+    <title>NeverNote</title>
     <link href="stylesheet.css" rel="stylesheet" type="text/css"></link>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
@@ -13,33 +13,31 @@
 <h2>Medipedia</h2>
 
 <div class="link">
-    <input type="button" value="検索" onclick="window.open('search.html')">
-    <input type="button" value="統計" onclick="window.open('https://bellcurve.jp/statistics/course/')">
-    <input type="button" value="メディカルAI" onclick="window.open('https://japan-medical-ai.github.io/medical-ai-course-materials/')">
+    <input type="button" value="Search" onclick="window.open('search.html')">
 </div>
 </div>
 
 
 <form action="http://localhost:5000/cgi-bin/main.py" method="post" target="frame">
     <div class="form">
-        タグ：<input type="text" id="name" name="name" size=35 value="">
-        画像：
+        Tag：<input type="text" id="name" name="name" size=35 value="">
+        Image：
         <input type="file" id="img" name="img_path" accept="image/*" style="display:none" onchange="if(this.value != '') 
                 $('#check').prop('checked',true);">
-        <input type="button" value="ファイル選択" onclick="$('#img').click();">    
+        <input type="button" value="select_files" onclick="$('#img').click();">    
         <input type="checkbox" id="check" onclick="this.click()">
         <input type="submit" id="submit" style="display:none">
-        <input type="button" value="実行" onclick="$('#submit').click(); $('#img').prop('value',null); $('#contents').prop('value',''); $('#check').prop('checked',false);">
-        <input type="button" value="リセット" onclick="$('#img').prop('value',null); $('#contents').prop('value',''); $('#check').prop('checked',false);">
+        <input type="button" value="exec" onclick="$('#submit').click(); $('#img').prop('value',null); $('#contents').prop('value',''); $('#check').prop('checked',false);">
+        <input type="button" value="reset" onclick="$('#img').prop('value',null); $('#contents').prop('value',''); $('#check').prop('checked',false);">
     </div>
     
     <textarea id="contents" name="contents"></textarea>
     
     <div class="file">
         ノート：
-        <input type="radio" name="file" value="text/medical.txt" checked="checked">医学
-        <input type="radio" name="file" value="text/english.txt">英語
-        <input type="radio" name="file" value="text/python.txt">python
+        <input type="radio" name="file" value="text/note1.txt" checked="checked">note1
+        <input type="radio" name="file" value="text/note2.txt">note2
+        <input type="radio" name="file" value="text/note3.txt">note3
         
     </div>
     
