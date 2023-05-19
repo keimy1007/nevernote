@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Search</title>
-    <link href="/static/css/stylesheet.css" rel="stylesheet" type="text/css"></link>
+    <link href="{{ url_for('static', filename='/css/stylesheet.css') }}" rel="stylesheet" type="text/css"></link>
     <script src="script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 <body>
 
-<form action="http://localhost:5000/cgi-bin/main.py" method="post" name="Form">
+<form action="{{ url_for('search') }}" method="post" name="Form">
     
     <div class="file">
         Notes：
@@ -33,7 +33,7 @@
 </form>
 
 
-<iframe src="http://localhost:5000/cgi-bin/main.py" name="frame" height=700 width=900>
+<iframe name="frame" height=700 width=900>
 </iframe>
 
 

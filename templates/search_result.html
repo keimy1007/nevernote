@@ -1,0 +1,14 @@
+<meta charset="UTF-8">
+<title>Nevernote</title>
+<link href="{{ url_for('static', filename='/css/stylesheet.css') }}" rel="stylesheet" type="text/css">
+</link>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<body name="main" style="background:skyblue ; font-size:15">
+  ヒット数：{{ hit }} / {{ total }}
+  {% autoescape false %}
+  {% for ans in anss %}
+  <hr>
+  <a>{{ loop.index }}/{{ hit }}</a> {{ ans }} 
+  {% endfor %}
+  {% endautoescape %}
+</body>

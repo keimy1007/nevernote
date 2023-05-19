@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>NeverNote</title>
-    <link href="/static/css/stylesheet.css" rel="stylesheet" type="text/css"></link>
+    <link href="{{ url_for('static', filename='/css/stylesheet.css') }}" rel="stylesheet" type="text/css"></link>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 </head>
@@ -13,15 +13,15 @@
 <h2>NeverNote</h2>
 
 <div class="link">
-    <input type="button" value="Search" onclick="window.open('search.html')">
+    <input type="button" value="Search" onclick="window.open('{{ url_for('search') }}')">
 </div>
 </div>
 
 
-<form action="http://localhost:5000/cgi-bin/main.py" method="post" target="frame">
+<form action="{{ url_for('update') }}" method="post" target="frame">
     <div class="form">
-        Tag：<input type="text" id="name" name="name" size=35 value="">
-        Image：
+        Tag: <input type="text" id="name" name="name" size=35 value="">
+        Image: 
         <input type="file" id="img" name="img_path" accept="image/*" style="display:none" onchange="if(this.value != '') 
                 $('#check').prop('checked',true);">
         <input type="button" value="select_files" onclick="$('#img').click();">    
@@ -34,7 +34,7 @@
     <textarea id="contents" name="contents"></textarea>
     
     <div class="file">
-        Notes：
+        Notes: 
         <input type="radio" name="file" value="text/note1.txt" checked="checked">note1
         <input type="radio" name="file" value="text/note2.txt">note2
         <input type="radio" name="file" value="text/note3.txt">note3
@@ -44,7 +44,7 @@
 </form>
 
 
-<iframe src="http://localhost:5000/cgi-bin/main.py" name="frame" height=700 width=900>
+<iframe name="frame" height=700 width=900>
 </iframe>
 
 
