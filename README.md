@@ -1,7 +1,7 @@
 # how to use
 
 
-# useful commands for search window
+# useful commands for searching
 **all** : show all articles
 
 **img** : show articles with image
